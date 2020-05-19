@@ -1,6 +1,6 @@
 package com.jd.security.mybatis.kms.vo;
 
-public final class MetaColumn {
+public final class DbMetaColumn {
     private String columnName;
     private String columnLabel;
     private int columnType;
@@ -8,8 +8,7 @@ public final class MetaColumn {
     private String catalogName;
     private String tableName;
 
-    public MetaColumn() {
-    }
+
 
     public String getColumnName() {
         return this.columnName;
@@ -58,4 +57,5 @@ public final class MetaColumn {
     public void setTableName(String tableName) {
         this.tableName = tableName;
     }
+
 }

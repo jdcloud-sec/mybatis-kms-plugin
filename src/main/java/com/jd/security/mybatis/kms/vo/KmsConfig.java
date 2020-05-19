@@ -1,7 +1,7 @@
 package com.jd.security.mybatis.kms.vo;
 
 
-public final class KmsProps {
+public final class KmsConfig {
     private static String accessKey;
     private static String secretKey;
     private static String endpoint;
@@ -17,7 +17,7 @@ public final class KmsProps {
     }
 
     public static void setAccessKey(String accessKey) {
-        KmsProps.accessKey = accessKey;
+        KmsConfig.accessKey = accessKey;
     }
 
     public static String getSecretKey() {
@@ -25,7 +25,7 @@ public final class KmsProps {
     }
 
     public static void setSecretKey(String secretKey) {
-        KmsProps.secretKey = secretKey;
+        KmsConfig.secretKey = secretKey;
     }
 
     public static String getEndpoint() {
@@ -33,7 +33,7 @@ public final class KmsProps {
     }
 
     public static void setEndpoint(String endpoint) {
-        KmsProps.endpoint = endpoint;
+        KmsConfig.endpoint = endpoint;
     }
 
     public static String getKeyId() {
@@ -41,7 +41,7 @@ public final class KmsProps {
     }
 
     public static void setKeyId(String keyId) {
-        KmsProps.keyId = keyId;
+        KmsConfig.keyId = keyId;
     }
 
     public static String getIndexSalt() {
@@ -49,7 +49,7 @@ public final class KmsProps {
     }
 
     public static void setIndexSalt(String indexSalt) {
-        KmsProps.indexSalt = indexSalt;
+        KmsConfig.indexSalt = indexSalt;
     }
 
     public static String getWritePlaintext() {
@@ -61,7 +61,7 @@ public final class KmsProps {
     }
 
     public static void setWritePlaintext(String writePlaintext) {
-        KmsProps.writePlaintext = writePlaintext;
+        KmsConfig.writePlaintext = writePlaintext;
     }
 
     public static String getIsProd() {
@@ -69,7 +69,7 @@ public final class KmsProps {
     }
 
     public static void setIsProd(String isProd) {
-        KmsProps.isProd = isProd;
+        KmsConfig.isProd = isProd;
     }
 
     public static String getSchema() {
@@ -77,6 +77,6 @@ public final class KmsProps {
     }
 
     public static void setSchema(String schema) {
-        KmsProps.schema = schema;
+        KmsConfig.schema = schema;
     }
 }

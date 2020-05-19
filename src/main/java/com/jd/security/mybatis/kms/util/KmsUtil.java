@@ -28,7 +28,7 @@ public final class KmsUtil {
         return Boolean.FALSE.toString().equals(str) || Boolean.TRUE.toString().equals(str);
     }
 
-    public static String dateToString(Date date, String jdbcType) {
+    public static String date2String(Date date, String jdbcType) {
         String res = null;
         if (date != null) {
             String format;
@@ -49,7 +49,7 @@ public final class KmsUtil {
         return res;
     }
 
-    public static Date stringToUtilDate(String str, String format) {
+    public static Date string2UtilDate(String str, String format) {
         Date res = null;
         if (!isBlank(str)) {
             try {
@@ -62,27 +62,27 @@ public final class KmsUtil {
         return res;
     }
 
-    public static Timestamp stringToTimestamp(String str, String format) {
+    public static Timestamp string2Timestamp(String str, String format) {
         Timestamp res = null;
-        Date date = stringToUtilDate(str, format);
+        Date date = string2UtilDate(str, format);
         if (date != null) {
             res = new Timestamp(date.getTime());
         }
         return res;
     }
 
-    public static java.sql.Date stringToSqlDate(String str, String format) {
+    public static java.sql.Date string2SqlDate(String str, String format) {
         java.sql.Date res = null;
-        Date date = stringToUtilDate(str, format);
+        Date date = string2UtilDate(str, format);
         if (date != null) {
             res = new java.sql.Date(date.getTime());
         }
         return res;
     }
 
-    public static Time stringToSqlTime(String str, String format) {
+    public static Time string2SqlTime(String str, String format) {
         Time res = null;
-        Date date = stringToUtilDate(str, format);
+        Date date = string2UtilDate(str, format);
         if (date != null) {
             res = new Time(date.getTime());
         }
@@ -98,13 +98,13 @@ public final class KmsUtil {
         if (obj == null) {
             res = null;
         } else if (obj instanceof java.sql.Date) {
-            res = dateToString((java.sql.Date)obj, jdbcType);
+            res = date2String((java.sql.Date)obj, jdbcType);
         } else if (obj instanceof Time) {
-            res = dateToString((Time)obj, KmsJdbcType.TIME.getJdbcType());
+            res = date2String((Time)obj, KmsJdbcType.TIME.getJdbcType());
         } else if (obj instanceof Timestamp) {
-            res = dateToString((Timestamp)obj, jdbcType);
+            res = date2String((Timestamp)obj, jdbcType);
         } else if (obj instanceof Date) {
-            res = dateToString((Date)obj, jdbcType);
+            res = date2String((Date)obj, jdbcType);
         } else {
             res = String.valueOf(obj);
         }
